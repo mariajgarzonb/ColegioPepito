@@ -15,12 +15,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: '16'
 
       - name: Create and start virtual environment
         run: |
@@ -60,4 +61,5 @@ jobs:
           app-name: 'Col-Pepito-Perez'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_693096991E5F41FAB1A66801326B97B1 }}
+
 

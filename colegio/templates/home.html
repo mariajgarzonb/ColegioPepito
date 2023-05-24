@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %}
+<!-- Agrega esta línea para cargar la etiqueta 'static' -->
+
+{% block content %}
+
+<main class="container py-5">
+  <section class="card card-body">
+    <div class="text-center">
+      <img src="{% static 'imagenes/logo400.png' %}" alt="Logo del colegio" />
+    </div>
+    <p>
+      Bienvenidos al Colegio Pepito Pérez, donde la excelencia educativa y el
+      crecimiento integral de nuestros estudiantes son nuestra prioridad. En el
+      Colegio Pepito Pérez, nos enorgullece ofrecer una educación de calidad que
+      inspira el amor por el aprendizaje, promueve la creatividad y forma
+      líderes del mañana. Nuestro compromiso con la excelencia académica se
+      combina con un enfoque personalizado, que respeta las necesidades
+      individuales de cada estudiante.
+    </p>
+  </section>
+</main>
+
+{% endblock %}

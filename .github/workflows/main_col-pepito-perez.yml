@@ -16,8 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          node-version: 16
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -41,7 +39,6 @@ jobs:
           path: |
             . 
             !venv/
-
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -63,3 +60,4 @@ jobs:
           app-name: 'Col-Pepito-Perez'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_693096991E5F41FAB1A66801326B97B1 }}
+
